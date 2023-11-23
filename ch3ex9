@@ -1,0 +1,15 @@
+package textbookExercise;
+
+public class ch3ex9 extends ch3ex8 { //collection based for loop
+
+	enum Season {spring, summer, fall, winter} //enumeration type definition, OUTSIDE of Main
+	
+	public static void main(String[] args) {
+
+		for(Season season : Season.values()) {		//vary over ALL values
+			System.out.println(" The season is now " + season);
+		}
+		
+	}
+
+}

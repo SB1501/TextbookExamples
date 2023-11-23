@@ -1,0 +1,28 @@
+package textbookExercise;
+
+public class ch3ex14 extends ch3ex13 { //calculating primes 1: using a break statement in a loop. finds all the primes from 2 to 50
+
+	public static void main(String[] args) {
+			
+		int nValues = 50; 		//the maximum value to be checked
+		boolean isPrime = true; //is true if we find a prime
+		
+		//check all values from 2 to nValues
+		for(int i = 2; i <= nValues; ++i) {
+			isPrime=true;		//assumes current i is prime
+			
+			//try dividing by all integers from 2 to i-1
+			for (int j = 2; j<i; ++j) {
+				if(i % j == 0) {	//This is true if j divides exactly
+					isPrime = false;//if we got here, it was an exact division
+					break;			//so exit the loop
+				}
+			}
+			//We can get here through the break or through completing the loop
+			if(isPrime)				// so is it prime?
+				System.out.println(i);//yes, so output the value.
+		}
+
+	}
+
+}

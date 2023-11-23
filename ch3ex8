@@ -1,0 +1,18 @@
+package textbookExercise;
+
+public class ch3ex8 extends ch3ex7 { //numerical for loop
+
+	public static void main(String[] args) {
+
+		int limit = 20;		// sum from 1 to this value
+		int sum = 0; 		// accumulate sum in this variable
+		
+		//Loop from 1 to the value of limit, adding 1 each cycle
+		for(int i = 1; i <= limit; ++i) {
+			sum += i; 	//add the current value of i to sum
+		}
+		System.out.println("sum = " + sum);
+
+	}
+
+}

@@ -1,0 +1,36 @@
+package textbookExercise;
+
+public class ch4ex1 extends ch3ex17 { //methods - using an initialisation block
+
+	static int[] values = new int[10];
+	
+	
+		//initialisation block
+		static {
+			System.out.println("Running initialisation block.");  //values is a method of the ch4ex1 class. it has an array of 10 integers 
+			for(int i = 0; i<values.length; ++i) {
+				values[i] = (int)(100.0*Math.random());
+			}
+		}
+		
+		//List values in the array for an object
+		void listValues() {
+			System.out.println();		//start a new line
+			for(int value: values) {
+				
+				System.out.print(" " + value);  //display values 
+			}
+			System.out.println();				//start a new line
+		}
+		
+		public static void main(String[] args) {
+			ch4ex1 example = new ch4ex1();
+			System.out.println("\n First object:");
+			example.listValues();
+			
+			example = new ch4ex1();
+			System.out.println("\nSecond object:");
+			example.listValues();
+	}
+
+}

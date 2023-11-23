@@ -1,0 +1,25 @@
+package textbookExercise;
+
+import java.lang.*;
+
+public class ch3ex17 extends ch3ex16 {
+	
+	public static void main(String[] args) {
+		
+		int daysInMonth = 32;
+		if(daysInMonth == 30) {
+			System.out.println("Month is April, June, September or November.");
+			
+		} else if(daysInMonth == 31) {
+			System.out.println("Month is January, MArch, May, July, August, October or December.");
+			
+		} else if(daysInMonth == 28 || daysInMonth == 29) {
+			System.out.println("Month is February");
+			
+		} else {
+			assert false;
+		}
+		
+	}
+
+}

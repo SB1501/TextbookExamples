@@ -1,0 +1,26 @@
+package textbookExercise;
+
+public class ch3ex16 extends ch3ex15 {
+
+	public static void main(String[] args) {
+		
+		int nPrimes = 50; //the max number of primes required
+		
+		OuterLoop:
+			for(int i = 2; ; ++i) {		//this loop runs FOREVER!
+				//try dividing by all integers from 2 to i-1
+				for(int j = 2; j<i ; ++j) {
+					if(i % j == 0) { 	//this is true if j divides exactly
+						continue OuterLoop; //so exit the loop
+					}
+				}
+				//we only get here if we have a prime
+				System.out.println(i);	//so output the value
+				if(--nPrimes == 0) {	//decrement the prime count
+					break;				//it is zero so we have them all
+				}
+			}
+
+	}
+
+}

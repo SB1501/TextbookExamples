@@ -1,0 +1,24 @@
+package textbookExercise;
+
+public class ch3ex13 extends ch3ex12 { //labeled continue statement, to omit the calculation of factorials of odd numbers greater than 10
+
+	public static void main(String[] args) {
+
+		long limit = 20L; //to calculate factorial of integers up to this value
+		long factorial = 1L; //factorial will be calculated in this variable
+		
+		OuterLoop:
+			for(long i = 1L; i <= limit; ++i) {
+				factorial = 1;					//initialise factorial
+				for(long j = 2L; j <= i; ++j) {
+					if(i > 10L && i % 2L == 1L) {
+						continue OuterLoop; //transfer to the Outer Loop
+					}
+					factorial *= j; 
+				}
+				System.out.println(i + "! is " + factorial);
+			}
+		
+	}
+
+}

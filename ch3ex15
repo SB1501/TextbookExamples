@@ -1,0 +1,24 @@
+package textbookExercise;
+
+public class ch3ex15 extends ch3ex14 { //calculating primes 2
+
+	public static void main(String[] args) {
+
+		int nValues = 50; //the maximum number to be checked
+		
+		//check all values from 2 to nValues
+		
+		OuterLoop:
+			for(int i = 2; i <= nValues; ++i) {
+				//Try dividing by all integers from 2 to i-1
+				for(int j = 2; j < i; ++j) {
+					if(i%j == 0) {	//this is true if j divides exactly 
+						continue OuterLoop; //so exit the loop
+					}
+				}
+				//We only get here if we have a prime
+				System.out.println(i); //so output the value
+			}
+	}
+
+}

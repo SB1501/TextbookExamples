@@ -1,0 +1,39 @@
+package textbookExercise;
+
+import static java.lang.Integer.toBinaryString;
+
+public class ch2ex6 extends ch2ex5 { //demonstrates Bitwise AND and Bitwise OR operators, plus toBinaryString 
+
+	public static void main(String[] args) {
+		
+		int indicators = 0b1111_1111_0000_0111; //same as 0xFF07
+		int selectBit3 = 0b0000_0000_0000_0100; //mask the 3rd last bit, ox4
+		
+		//try the Bitwise AND to select the third bit in indicators
+		
+		System.out.println("indicators =               " + toBinaryString(indicators));
+		System.out.println("selectBit3 =                            " + toBinaryString(selectBit3));
+		
+		indicators &= selectBit3;
+		System.out.println("indicators & selectBit3 =               " + toBinaryString(indicators));
+		
+		
+		//try the Bitwise OR to switch the third bit on
+		
+		indicators = 0b1111_1111_0000_1001; //same as 0xFF09
+		
+		System.out.println("\nindicators                 "+ toBinaryString(indicators));
+		System.out.println("selectBit3                              "+ toBinaryString(selectBit3));
+		
+		indicators |= selectBit3;
+		System.out.println("indicators |= selectBit3 = " + toBinaryString(indicators));
+
+		//now switch the third bit off again
+		
+		indicators &= ~selectBit3;
+		
+		System.out.println("\n The third bit in the previous value of indicators has been switched off");
+		System.out.println("indicators & ~selectBit3 = " + toBinaryString(indicators));
+	}
+
+}

@@ -1,0 +1,23 @@
+package textbookExercise;
+
+public class ch2ex9 extends ch2ex8 { //demonstrates enumerations
+
+	enum Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}
+	//OUTSIDE of the Main Method
+	
+	public static void main(String[] args) {
+		
+		//define three variables of type: Day
+		
+		Day yesterday = Day.Thursday;
+		Day today = Day.Friday;
+		Day tomorrow = Day.Saturday;
+		
+		//output the values of the Day variables
+		System.out.println("Today is " + today);
+		System.out.println("Tomorrow will be " +tomorrow);
+		System.out.println("Yesterday was " + yesterday);		
+		
+	}
+
+}

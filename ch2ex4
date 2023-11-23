@@ -1,0 +1,38 @@
+package textbookExercise;
+
+public class ch2ex4 extends ch2ex3 { //demonstrates using Math class methods in calculations 
+
+	public static void main(String[] args) {
+
+		// calculate the radius of a pond which can hold 20 fish averaging 10 inches long
+		
+		int fishCount = 20; 		//number of fish in pond
+		int fishLength = 10; 		//average fish length 
+		int inchesPerFoot = 12; 	//number of inches in one foot
+		int lengthPerSqFt = 2;  	// fish length per sq ft of surface
+		double radius = 0.0; 		//pond radius in feet
+
+		int feet = 0;				//pond radius - whole feet
+		int inches = 0; 			// 				- and whole inches
+		
+		double pondArea = (double)(fishCount*fishLength)/lengthPerSqFt;
+		radius = Math.sqrt(pondArea/Math.PI);
+		
+		//get the whole feet and nothing but the feet
+		
+		feet = (int)Math.floor(radius);
+		inches = (int)Math.round(inchesPerFoot*(radius-feet));  //get the inches
+		
+		System.out.println(
+				"To hold " + fishCount + " fish averaging " + fishLength + " inches long you need a pond with an area of \n" + pondArea + " square feet."
+				);
+		System.out.println(
+				"\nThe radius of a pond with area " + pondArea + " square feet is " + feet + " feet " + inches + " inches. "
+				);
+				
+		
+		
+		
+	}
+
+}

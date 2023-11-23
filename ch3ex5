@@ -1,0 +1,14 @@
+package textbookExercise;
+
+public class ch3ex5 extends ch3ex4 { //demonstrates conditional plurals (adding s or not to end of words based on plurality)
+
+	public static void main(String[] args) {
+
+		int nHats = 1; //number of hats
+		System.out.println("I have " + nHats + " hat" + (nHats == 1 ? "." : "s.")); //if it's 1 hat, use full stop, or add 's' to end of hat to make hats
+		
+		nHats++; //increment +1 number of hats
+		System.out.println("I have " + nHats + " hat" + (nHats == 1 ? "." : "s."));		
+	}
+
+}

@@ -1,0 +1,21 @@
+package textbookExercise;
+
+public class ch3ex11 extends ch3ex10 { //the DO WHILE loop - always executed at least once before checking condition 
+
+	public static void main(String[] args) {
+
+		int limit = 20;		// sum from 1 to this value
+		int sum = 0; 		// accumulate sum in this variable
+		int i = 1; 			// loop counter
+		
+		//Loop from 1 to the value of limit, adding 1 each cycle
+		
+		do {
+			sum +=i; 		//add the current value of i to sum
+			i++;			
+		} while (i <= limit);
+		
+		System.out.println("sum = " + sum);
+	}
+
+}

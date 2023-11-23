@@ -1,0 +1,20 @@
+package textbookExercise;
+
+public class ch3ex10 extends ch3ex9 { //the WHILE loop
+
+	public static void main(String[] args) {
+
+		int limit = 20; 	//sum from 1 to this value
+		int sum = 0; 		//accumulate sum in this variable
+		int i = 1; 			//loop counter
+		
+		//Loop from 1 to the value of limit, adding 1 each cycle 
+		
+		while(i<=limit) {
+			sum += i++; 	//add the current value of i to sum
+		}
+		System.out.println("sum = " + sum);
+		
+	}
+
+}

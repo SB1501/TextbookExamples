@@ -1,0 +1,18 @@
+package textbookExercise;
+
+public class ch2ex3 extends ch2ex2 {
+
+	public static void main(String[] args) {
+
+		double numOranges = 50.0E-1;  //initial value is 5.0, shows it in negative exponent format
+		double numApples = 1.0E1; // initial value is 10.0
+		double averageFruit = 0.0;
+		
+		averageFruit = (numOranges + numApples) / 2.0;
+		
+		System.out.println("A totally fruity programme!");
+		System.out.println("Average fruit is: " + averageFruit);
+
+	}
+
+}

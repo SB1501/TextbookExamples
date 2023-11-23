@@ -1,0 +1,30 @@
+package textbookExercise;
+
+import java.io.IOException;
+
+public class ch2ex1 {
+
+	public static void main(String[] args) {
+		
+		int numOranges = 5; //count of Oranges
+		int numApples = 10; //count of Apples
+		int numFruit = 0; //count of Fruit
+		
+		numFruit = numOranges + numApples; //calculates the total fruit count
+		
+		System.out.println("A totally fruity programme!"); //output shown
+		System.out.println("Total fruit is: " +numFruit);
+		
+		//code to delay the ending of the programme
+		
+		System.out.println("Please press Enter to close the programme.");
+				
+		try {
+			System.in.read(); //read input from the keyboard 
+		} catch (IOException e) { //catch the input exception
+			return;		//and just return
+		}
+
+	}
+
+}
